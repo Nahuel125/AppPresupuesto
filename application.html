@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/wallet.png" type="image/x-icon">
+    <title>Finanzas Fáciles</title>
+</head>
+<body>
+    <header>
+        <h1>Finanzas Faciles</h1>
+        <p>¡Mantén un control de tus finanzas personales!</p>
+    </header>
+    <main class="mainContainer">
+        <section class="sectionDescription">
+            <div class="description">
+                <h2>¿Qué es Finanzas Faciles?</h2>
+                <p><strong>Finanzas Faciles</strong> es una App pensada para ayudarte a controlar tu situación financiera de una forma <strong class="strongText">comoda y rápida</strong>.</p>
+                <p>Se sabe que <i>para mejorar, hay que planificar</i>. Utiliza la App para ingresar tu presupuesto semanal, anota tus gastos y lleva un control.</p>
+            </div>
+            <div class="description">
+                <img src="images/3112677.jpg" alt="" class="imageDescription">
+            </div>
+        </section>
+        <section class="sectionApplication">
+            <div class="card">
+                <h3>¡Añade tus gatos aquí!</h3>
+                <input type="text" placeholder="Tipo (Ej: Comida)" id="transactionType">
+                <input type="text" placeholder="Monto $" id="transactionMount">
+                    <button class="buttonArticle" id="transactionButton">Añadir Gasto</button>
+                    <button class="buttonArticle" id="restartEstimate">Renovar Presupuesto</button> 
+            </div>
+            <div class="listFinance" id="listFinance">
+                <div class="listControl">
+                    <p><strong>Presupuesto:</strong> <span id="moneyAvailable"></span></p> 
+                    <p id="alertMoney"><strong>Restante:</strong><span id="moneyLeftover"></span></p> 
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span class="material-icons iconFooter">flash_on</span>
+            <p><i>Desarrollado por <a href="https://www.linkedin.com/in/nahuel-martinez-46b8071ba/" target="_blank">Nahu</a></i></p>
+        </footer>
+    </main>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/application.js"></script>
+</body>
+</html>

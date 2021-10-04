@@ -2,9 +2,8 @@ const transactionButton = document.getElementById("transactionButton");
 const transactionType = document.getElementById("transactionType");
 const transactionMount = document.getElementById("transactionMount");
 const transactionList = document.getElementById("listFinance");
+const restartButton = document.getElementById("restartEstimate");
 const dataBase = window.localStorage;
-
-addNewEstimation(dataBase);
 
 uploadMoneyAvailable(dataBase);
 
@@ -18,3 +17,8 @@ transactionButton.onclick = () => {
 };
 
 uploadTransaction(dataBase, transactionList);
+
+restartButton.onclick = () => {
+  dataBase.clear();
+  window.location.href = "index.html";
+};

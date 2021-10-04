@@ -1,18 +1,3 @@
-const addNewEstimation = (dataBase) => {
-  if (localStorage.length == 0) {
-    let money = {
-      id: "totalMoney",
-      total: prompt("Ingresa el dinero que tienes disponible:"),
-    };
-    saveMoneyAvailable(money, dataBase);
-  }
-};
-
-const saveMoneyAvailable = (money, dataBase) => {
-  dataBase.setItem(money.id, JSON.stringify(money));
-  dataBase.setItem("total", JSON.stringify(money));
-};
-
 const uploadMoneyAvailable = (dataBase) => {
   const money = JSON.parse(dataBase.getItem("totalMoney"));
   const moneyValue = JSON.parse(dataBase.getItem("total"));
@@ -58,7 +43,7 @@ function addArticle(dataBase, article, parentNode) {
   iconDelete.classList.add("material-icons", "icono");
 
   iconDelete.onclick = () => {
-    restMoney(dataBase, article);
+    addMoney(dataBase, article);
     dataBase.removeItem(article.id);
   };
 
@@ -70,7 +55,7 @@ function addArticle(dataBase, article, parentNode) {
   applyColorAlert(dataBase);
 }
 
-const restMoney = (dataBase, article) => {
+const addMoney = (dataBase, article) => {
   let objeto = JSON.parse(dataBase.getItem("totalMoney"));
 
   let money2 = {
@@ -85,13 +70,12 @@ const restMoney = (dataBase, article) => {
 const applyColorAlert = (dataBase) => {
   let objeto = JSON.parse(dataBase.getItem("totalMoney"));
   let objetoTotal = JSON.parse(dataBase.getItem("total"));
-  let p = document.getElementById("alertMoney");
   let porcentajeMitad = (50 * objetoTotal.total) / 100;
-  let porcentajePoco = (25 * objetoTotal.total) / 100;
+  let porcentajeCuarto = (25 * objetoTotal.total) / 100;
 
-  if (objeto.total <= porcentajePoco) {
-    p.classList.add("moneyResto");
+  if (objeto.total <= porcentajeCuarto) {
+    document.getElementById("alertMoney").classList.add("moneyResto");
   } else if (objeto.total <= porcentajeMitad) {
-    p.classList.add("moneyLeftover");
+    document.getElementById("alertMoney").classList.add("moneyLeftover");
   }
 };
