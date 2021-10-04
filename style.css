@@ -122,6 +122,7 @@ header {
   margin: 1rem 0;
   padding: 0rem 1rem;
   border-radius: 10px;
+  border: solid 1px grey;
 }
 
 .listControl p:first-child {
@@ -184,4 +185,126 @@ footer a {
 footer .iconFooter {
   color: #f19419;
   font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .imageDescription {
+    width: 100%;
+    border-radius: 3rem;
+    border: 1px solid black;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .mainContainer {
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .sectionDescription {
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .listFinance {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .imageDescription {
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid black;
+  }
+
+  .description {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card input {
+    width: 80%;
+  }
+
+  .card .buttonArticle {
+    width: 180px;
+  }
+
+  .listControl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .listControl p {
+    margin: 1rem 0;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+  }
+
+  .listArticle {
+    width: 95%;
+  }
+}
+
+@media (max-width: 530px) {
+  .listControl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+
+  .listControl p {
+    border-radius: 1rem;
+    width: 70%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 405px) {
+  .listControl p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .card input {
+    width: 95%;
+  }
 }
